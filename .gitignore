@@ -20,3 +20,7 @@ bookings.db
 static/qr/
 logs/
 *.log
+ngrok.exe
+static/ngrok.exe
+speech.mp3
+test.mp3
