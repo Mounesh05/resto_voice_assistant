@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+        body {
+            background: #f3f7f3;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background: white;
+            width: 320px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+            color: #0F9D58;
+            font-size: 22px;
+        }
+        input {
+            padding: 10px;
+            width: 90%;
+            margin-top: 12px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 18px;
+            padding: 10px 16px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #0F9D58;
+            color: white;
+            font-size: 16px;
+        }
+        .error { color: red; margin-top: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Admin Login</h2>
+    <form method="POST">
+        <input type="password" name="pin" placeholder="Enter admin PIN" required>
+        <button type="submit">Login</button>
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+    </form>
+</div>
+
+</body>
+</html>

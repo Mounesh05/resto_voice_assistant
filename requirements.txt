@@ -1,0 +1,7 @@
+﻿flask
+python-dotenv
+python-dateutil
+qrcode
+twilio
+edge-tts
+requests

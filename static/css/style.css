@@ -1,0 +1,180 @@
+/* Import the new font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    /* BOLD: Deep, dark gradient background */
+    background: linear-gradient(135deg, #2a2d34, #1a1d24);
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #f0f0f0;
+}
+
+.container {
+    width: 450px;
+    margin: 40px auto;
+    /* BOLD: Dark, glassy container */
+    background: #2a2d34;
+    border-radius: 18px;
+    padding: 30px;
+    /* BOLD: Glow shadow for a modern, bold look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 20px rgba(15, 157, 88, 0.2);
+    text-align: center;
+    /* STUNNING: More dynamic pop-in animation */
+    animation: popIn 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* STUNNING: New pop-in keyframe */
+@keyframes popIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+h1 {
+    margin: 0;
+    color: #0F9D58; /* Brand green pops on dark bg */
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.sub {
+    margin-top: 4px;
+    color: #a0a0a0; /* Lighter text for dark bg */
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#chat {
+    height: 440px;
+    overflow-y: auto;
+    margin-top: 15px;
+    padding: 14px;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 14px;
+    background: #1a1d24; /* Darker chat area */
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot, .user {
+    padding: 12px 18px;
+    margin: 7px 0;
+    max-width: 80%;
+    border-radius: 18px;
+    /* STUNNING: New message animation */
+    animation: msgIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    line-height: 1.4;
+}
+
+/* STUNNING: Bouncier message animation */
+@keyframes msgIn {
+    from { opacity: 0; transform: scale(0.8) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.bot {
+    /* BOLD: Use the main brand color for bot messages */
+    background: #0F9D58;
+    color: #ffffff;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.user {
+    /* BOLD: A clean, mid-gray for user messages */
+    background: #4a4d54;
+    color: #f0f0f0;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* STUNNING: Modern three-dot typing indicator */
+.typing {
+    align-self: flex-start;
+    padding: 12px 18px;
+    margin: 7px 0;
+    border-radius: 18px;
+    background: #0F9D58;
+    opacity: 0.7;
+    display: inline-block;
+}
+.typing span {
+    height: 8px;
+    width: 8px;
+    background: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: dotBlink 1.4s infinite both;
+}
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotBlink {
+    0% { opacity: 0.2; }
+    20% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+/* END: Typing indicator */
+
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    background: #0F9D58;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+button:hover:not(:disabled) {
+    background: #0c7d44;
+    /* BOLD: Stronger hover effect */
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(15, 157, 88, 0.4);
+}
+
+button:disabled {
+    background: #4a5c51; /* Darker disabled state */
+    color: #888;
+    cursor: not-allowed;
+}
+
+.admin-link {
+    margin-top: 20px;
+}
+
+.admin-link a {
+    color: #0F9D58;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.admin-link a:hover {
+    color: #17c975;
+    text-decoration: underline;
+}
+
+/* STUNNING: More pronounced mic glow */
+.listening {
+    animation: micGlow 1.2s infinite alternate;
+}
+
+@keyframes micGlow {
+    from { 
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(15, 157, 88, 0.5); 
+    }
+    to { 
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(15, 157, 88, 1); 
+    }
+}
