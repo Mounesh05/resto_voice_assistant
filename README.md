@@ -1,34 +1,8 @@
-\# AM Restaurant - Voice Based Table Reservation Assistant
+"VAANI" - Voice Based Table Reservation Assistant
 
 
 
-This project is an \*\*AI-powered restaurant reservation system\*\* where customers can interact using \*\*voice\*\* to book or cancel table reservations. The system uses \*\*speech recognition\*\*, \*\*text-to-speech\*\*, \*\*AI conversation logic\*\*, and \*\*WhatsApp integration\*\* to send booking confirmations along with a \*\*QR code\*\* for verification.
-
-
-
----
-
-
-
-\## ✅ Key Features
-
-
-
-| Feature | Description |
-
-|--------|-------------|
-
-| Voice Based Interaction | Customer speaks, system understands, replies with natural voice. |
-
-| Smart Conversation Flow | AI guides user through booking: date → time → guests → phone. |
-
-| WhatsApp Confirmation | Booking details + QR sent automatically via WhatsApp. |
-
-| QR Code at Entry | Staff can verify booking using QR scan. |
-
-| Admin Panel | View, search, and cancel bookings (status tracking). |
-
-| Local Database (SQLite) | Stores booking records securely. |
+This project is an "AI-powered restaurant reservation system" where customers can interact using voice to book or cancel table reservations. The system uses speech recognition,text-to-speech,AI conversation logic, and WhatsApp integration to send booking confirmations along with a QR code for verification.
 
 
 
@@ -36,7 +10,33 @@ This project is an \*\*AI-powered restaurant reservation system\*\* where custom
 
 
 
-\## 🏗 System Architecture
+ ✅ Key Features
+
+
+
+  Feature                                               Description 
+
+
+
+ Voice Based Interaction                     Customer speaks, system understands, replies with natural voice. |
+
+ Smart Conversation Flow                     AI guides user through booking: date → time → guests → phone. |
+
+ WhatsApp Confirmation                       Booking details + QR sent automatically via WhatsApp. |
+
+ QR Code at Entry                            Staff can verify booking using QR scan. |
+
+ Admin Panel                                 View, search, and cancel bookings (status tracking). |
+
+ Local Database (SQLite)                     Stores booking records securely. |
+
+
+
+---
+
+
+
+ 🏗 System Architecture
 
 
 
@@ -52,33 +52,33 @@ WhatsApp Notification + QR
 
 
 
-\## 🛠 Technologies Used
+ 🛠 Technologies Used
 
 
 
-\### Backend
+ Backend
 
-\- Python, Flask
+-> Python, Flask
 
-\- SQLite3 Database
+-> SQLite3 Database
 
-\- Edge-TTS (Text-to-Speech)
+->  Edge-TTS (Text-to-Speech)
 
-\- Ollama / LLaMA model (local AI)
-
-
-
-\### Frontend
-
-\- HTML, CSS, JavaScript (Vanilla)
-
-\- Web Speech API
+->  Ollama / LLaMA model (local AI)
 
 
 
-\### Messaging Integration
+ Frontend
 
-\- Twilio WhatsApp API
+->  HTML, CSS, JavaScript (Vanilla)
+
+->  Web Speech API
+
+
+
+ Messaging Integration
+
+->  Twilio WhatsApp API
 
 
 
@@ -86,7 +86,7 @@ WhatsApp Notification + QR
 
 
 
-\## 📂 Project Structure
+📂 Project Structure
 
 
 
@@ -132,35 +132,34 @@ resto\_voice\_assistant
 ---
 
 
-
-\## 🔑 Environment Variables (Create `.env` file)
-
+🔑 Environment Variables (Create `.env` file)
 
 
-TWILIO\_SID=xxxxxxxxxxxxxxxxxxxx
 
-TWILIO\_AUTH\_TOKEN=xxxxxxxxxxxx
+TWILIO_SID=xxxxxxxxxxxxxxxxxxxx
 
-TWILIO\_WHATSAPP\_NUMBER=xxxxxxxxxxxx
+TWILIO_AUTH_TOKEN=xxxxxxxxxxxx
 
-OWNER\_WHATSAPP=+91xxxxxxxxxx
+TWILIO_WHATSAPP_NUMBER=xxxxxxxxxxxx
 
-NGROK\_URL=xxxxxxxxxxxxxxxx
+OWNER_WHATSAPP=+91xxxxxxxxxx
 
-FLASK\_SECRET\_KEY=supersecretkey
+NGROK_URL=xxxxxxxxxxxxxxxx
 
-ADMIN\_PIN=xxxx
+FLASK_SECRET_KEY=supersecretkey
+
+ADMIN_PIN=xxxx
 
 
 ---
 
 
 
-\## ▶ How to Run
+ ▶ How to Run
 
 
 
-```bash
+#bash
 
 pip install -r requirements.txt
 
@@ -182,5 +181,6 @@ Open in browser:
 
 
 http://127.0.0.1:5000/
+
 
 
