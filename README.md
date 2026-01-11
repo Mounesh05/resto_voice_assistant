@@ -70,7 +70,7 @@ WhatsApp Notification + QR
 
  Frontend
 
-->  HTML, CSS, JavaScript (Vanilla)
+->  HTML, CSS, JavaScript 
 
 ->  Web Speech API
 
@@ -181,6 +181,7 @@ Open in browser:
 
 
 http://127.0.0.1:5000/
+
 
 
 
